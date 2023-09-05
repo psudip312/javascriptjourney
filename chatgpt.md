@@ -6,3 +6,7 @@ also give me task so that i will be able to learn about it real life tasks..
 falsy value in javascript
 
 how logucal operator works...
+
+what is hoisting tell me about it ?
+
+RETURN KEWORD: 

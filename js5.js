@@ -35,12 +35,12 @@ let findCounrty = () => {
 
 function findCountry(CountryName) {
     for (let index = 0; index < countryCode.length; index++) {
-      if (CountryName == countryCode[index].CountryName) {
+      if (CountryName.tolowerCase() == countryCode[index].CountryName) {
         console.log(`${countryCode[index].CountryName} code is ${countryCode[index].code}`);
-      }
+    break;  
+    }
     }
   }
-  
   findCountry("Nepal");
   findCountry("Rajasta")
   

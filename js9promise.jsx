@@ -22,10 +22,57 @@ nahuna ni sakcha so .. tala promise has 3 stages vaneko ho
             - reject
 */
 
-let promise1= new Promise(()=>{
+let promise= new Promise(()=>{
     
 })
 console.log(promise1)
 
 // yo padnu vadna agadi exceptional handling padeko ramro haiii...
 // so for now lets just pause promise and try to understand exceptinal handling hai umm java ma padeko jastai try catch hai 
+ 
+
+// kunai pani error prone code garunu cha vane try catch lagayeko best ho 
+// means euta system crash huna bata jogayo 
+
+function hashpassword(password){
+    manylogics
+}
+
+try{
+    hashpassword(12232)
+}catch(error){
+    console.log(error.message)
+}
+console.log("helloworld1")
+console.log("helloworld2")
+console.log("helloworld3")
+
+// mainly eslai lekhne tarika vaenko try ko bhitra eroor prone code rakhne edi error aayo vane catach le samathcaha 
+
+
+let promise1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        // reject("server error")
+        resolve("the promise has been complted/fulfilled/rsolved")
+    }, 3000)
+})
+
+console.log(promise1)
+
+promise1.then((response) => {
+    console.log(response)
+}).catch(err => {
+    console.log(err)
+})
+
+// up code le k garcha vanese prmise garese kei kam suppose promise garese kei time lagcha
+// time lagese sadai ramro response aaucha vanne hudaina if promise1 ko ressult k aaucha teslai .then le resolve garcha 
+
+
+console.log("after promise...");
+
+// react ma pi fetch haru sabbai promise ho 
+// yo vanekai asynchrous function hao afu background ma gayera run huncha aru lai chalna dincha 
+
+
+// .then() function asynchrous fucntion use hune bela use huncha 

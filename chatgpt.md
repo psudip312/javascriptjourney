@@ -9,10 +9,12 @@ how logucal operator works...
 
 what is hoisting tell me about it ?
 
-RETURN KEWORD: 
-break  
+RETURN KEWORD:
+break
 
 / CALLBACK /
 
     HOW DOES JS WORKS TELL ME ABOUT CALLSTACK GUVUNG EXAMPLES..
-    
+
+
+    falsy values in js

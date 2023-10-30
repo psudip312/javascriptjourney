@@ -100,5 +100,66 @@ console.log(doubleddArray);
 // .map returns new araay with exact same length as our original array
 alreadybanayekoarray = arr.map(() => {});
 // k advantage vayo ta esma aba esma push method pani use garnu parena for loop vanda forEach better yo vanda .map better
+// map function le original array lai change garaudaina taara aagi push le ta sidai original array nai change garauthieo
 
 console.log(alreadybanayekoarray);
+
+// kei kura filter garnu cha vane array bata for EAch lagako ramro cause .map le ta jsata ko testai naya array banayera dine kam ho
+
+let evennNumbers = [];
+
+arr.forEach((number) => {
+  if (number % 2 == 0) {
+    return evennNumbers.push(number);
+  }
+});
+console.log(evennNumbers);
+
+// basically array lai modify garnu pare map
+
+// aba roblem k aayo vanda map ma suppose hamlai forEach jastai kam garu paryo vane kasari garne ta
+// it can be solve by filter function
+// tara esle return cha true ra false garcha
+
+let numbers = [2, 3, 4, 5, 10, 20];
+let evenNumbers = []; // [2,4,10,20] // filter from above numbers varaiable
+/* 
+    loop for original numbers variable
+    and in each loop check if the number is even, 
+        if even, push in array evenNumbers  // to find even odd use <number> % 2
+*/
+
+// for(let i = 0;i<numbers.length;i++){
+//     if(numbers[i] %2 == 0){
+//         evenNumbers.push(numbers[i])
+//     }
+// }
+
+// numbers.forEach((number) => {
+//     if (number % 2 == 0) {
+//         evenNumbers.push(number)
+//     }
+// })
+
+/* falsy values : null undefined 0 NaN "" false */
+
+numbers = [2, 3, 4, 5, 10, 20];
+evenNumbers = numbers.filter((number) => {
+  if (number % 2 == 0) {
+    return true;
+  }
+});
+
+evenNumbers = numbers.filter((number) => number % 2 == 0);
+// edi hamle browser ko console ma gayera (number % 2 == 0) yo value rakhyo vane ra number ko thau ma 4 rakhda true nai huncha so esari garda ni huncha tesle true value chai return garcha ra  false return gardaina..
+
+console.log(evenNumbers);
+
+let ages = [10, 20, 30, 40, 40, 23];
+// let agesStr = ["Age is 10", "age is 20",...]
+
+agesStr = ages.map((age) => {
+  return "age is" + age;
+});
+// agesStr = ages.map((age) => "age is" + age)
+// console.log(agesStr)

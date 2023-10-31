@@ -129,12 +129,15 @@ let evenNumbers = []; // [2,4,10,20] // filter from above numbers varaiable
         if even, push in array evenNumbers  // to find even odd use <number> % 2
 */
 
+// STEP1
+
 // for(let i = 0;i<numbers.length;i++){
 //     if(numbers[i] %2 == 0){
 //         evenNumbers.push(numbers[i])
 //     }
 // }
 
+// STEP2
 // numbers.forEach((number) => {
 //     if (number % 2 == 0) {
 //         evenNumbers.push(number)
@@ -142,13 +145,14 @@ let evenNumbers = []; // [2,4,10,20] // filter from above numbers varaiable
 // })
 
 /* falsy values : null undefined 0 NaN "" false */
-
+// STEP3
 numbers = [2, 3, 4, 5, 10, 20];
 evenNumbers = numbers.filter((number) => {
   if (number % 2 == 0) {
     return true;
   }
 });
+// STEP4
 
 evenNumbers = numbers.filter((number) => number % 2 == 0);
 // edi hamle browser ko console ma gayera (number % 2 == 0) yo value rakhyo vane ra number ko thau ma 4 rakhda true nai huncha so esari garda ni huncha tesle true value chai return garcha ra  false return gardaina..
@@ -163,3 +167,18 @@ agesStr = ages.map((age) => {
 });
 // agesStr = ages.map((age) => "age is" + age)
 // console.log(agesStr)
+
+// so basically filter le chai naya arry vanaidincha tara find le chai match vako value return garcha
+// also The find method is useful when you need to locate the first element in an array that meets a specific criterion  and you don't need to search through the entire array.
+
+// first kura matra match vaye  thick cha  find ma ...
+
+// find Method:
+// Purpose: The find method is used to find the first element in an array that satisfies a specified condition and return that element. It stops as soon as it finds a matching element and does not continue to iterate through the entire array.
+// Return Value: It returns the first matching element or undefined if no matching element is found.
+const numberss = [1, 2, 3, 4, 5];
+const firstEven = numberss.find((element) => element % 2 === 0);
+// Returns the first even number: 2
+const numbersss = [1, 2, 3, 4, 5];
+const evenNumberss = numbersss.filter((element) => element % 2 === 0);
+// Returns an array of even numbers: [2, 4]

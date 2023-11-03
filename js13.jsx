@@ -17,3 +17,30 @@
 // console.log(username); // Output: 'john_doe'
 
 // esari store garne bela localStorage le string ko form ma  value haru store garcha so eslai strigngify gareko ho
+
+[1, 2, 3].includes(2);
+// esko op true aaucha cause aary ma 2 cha vanna khojeko
+//  euta array ma certain element cha ki nai vanera check garne lai matra ho
+
+function calculateSum(num1, num2, num3, num4, ...rest) {
+  let sum = num1 + num2 + num3 + num4;
+  rest.forEach((numbers) => {
+    sum += numbers;
+  });
+  console.log(sum);
+}
+// rest = [2, 32, 32, 21];
+
+calculateSum(1, 2, 3, 4, 2, 32, 32, 21);
+
+function double(num) {
+  // let num=3 block scope variable
+  console.log(num * 2);
+}
+double(3);
+
+function triple(num) {
+  //esma pani let num =10 nai cha cause let vanne scope varaible ho euta kunai pan euta scope ma use garna milcha
+  console.log(num * 3);
+}
+triple(10);

@@ -18,3 +18,5 @@ break
 
 
     falsy values in js
+
+global vairable and scoped variable
